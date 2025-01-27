@@ -1,0 +1,68 @@
+{
+    "curriculumDetect": {
+        "lesson_num": 0
+    },
+    "TouchMoveCube": {
+        "checkpoints": [
+            {
+                "steps": 999982,
+                "file_path": "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-999982.onnx",
+                "reward": 7.635848522186279,
+                "creation_time": 1716101175.4902453,
+                "auxillary_file_paths": [
+                    "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-999982.pt"
+                ]
+            },
+            {
+                "steps": 1499983,
+                "file_path": "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-1499983.onnx",
+                "reward": -1.0,
+                "creation_time": 1716103085.572405,
+                "auxillary_file_paths": [
+                    "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-1499983.pt"
+                ]
+            },
+            {
+                "steps": 1999970,
+                "file_path": "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-1999970.onnx",
+                "reward": 5.549616694450378,
+                "creation_time": 1716104916.1905866,
+                "auxillary_file_paths": [
+                    "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-1999970.pt"
+                ]
+            },
+            {
+                "steps": 2499951,
+                "file_path": "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-2499951.onnx",
+                "reward": 6.249566698074341,
+                "creation_time": 1716106853.1447952,
+                "auxillary_file_paths": [
+                    "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-2499951.pt"
+                ]
+            },
+            {
+                "steps": 2500015,
+                "file_path": "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-2500015.onnx",
+                "reward": 6.249566698074341,
+                "creation_time": 1716106853.2804923,
+                "auxillary_file_paths": [
+                    "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-2500015.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2500015,
+            "file_path": "results\\0.0003test1\\TouchMoveCube.onnx",
+            "reward": 6.249566698074341,
+            "creation_time": 1716106853.2804923,
+            "auxillary_file_paths": [
+                "results\\0.0003test1\\TouchMoveCube\\TouchMoveCube-2500015.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

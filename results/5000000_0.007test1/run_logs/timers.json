@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1716088070",
+        "python_version": "3.10.12 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 19:01:18) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\zing\\.conda\\envs\\mlagents\\Scripts\\mlagents-learn --train Robot_cur3.yaml --run-id=5000000_0.007test1 --force",
+        "mlagents_version": "1.0.0",
+        "mlagents_envs_version": "1.0.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.2.2+cu121",
+        "numpy_version": "1.23.1",
+        "end_time_seconds": "1716088133"
+    },
+    "total": 62.825884900004894,
+    "count": 1,
+    "self": 0.04219440001179464,
+    "children": {
+        "run_training.setup": {
+            "total": 0.151324399994337,
+            "count": 1,
+            "self": 0.151324399994337
+        },
+        "TrainerController.start_learning": {
+            "total": 62.63236609999876,
+            "count": 1,
+            "self": 0.0024469999989378266,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 62.62781610000093,
+                    "count": 1,
+                    "self": 62.62781610000093
+                },
+                "TrainerController._save_models": {
+                    "total": 0.0021029999988968484,
+                    "count": 1,
+                    "self": 0.0021029999988968484
+                }
+            }
+        }
+    }
+}

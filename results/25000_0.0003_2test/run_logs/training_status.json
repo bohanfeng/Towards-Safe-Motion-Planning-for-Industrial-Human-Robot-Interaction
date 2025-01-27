@@ -1,0 +1,41 @@
+{
+    "curriculumDetect": {
+        "lesson_num": 0
+    },
+    "TouchMoveCube": {
+        "checkpoints": [
+            {
+                "steps": 499960,
+                "file_path": "results\\25000_0.0003_2test\\TouchMoveCube\\TouchMoveCube-499960.onnx",
+                "reward": 0.6922564139732947,
+                "creation_time": 1715770900.7961404,
+                "auxillary_file_paths": [
+                    "results\\25000_0.0003_2test\\TouchMoveCube\\TouchMoveCube-499960.pt"
+                ]
+            },
+            {
+                "steps": 608764,
+                "file_path": "results\\25000_0.0003_2test\\TouchMoveCube\\TouchMoveCube-608764.onnx",
+                "reward": 2.922871809739333,
+                "creation_time": 1715772256.8091593,
+                "auxillary_file_paths": [
+                    "results\\25000_0.0003_2test\\TouchMoveCube\\TouchMoveCube-608764.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 608764,
+            "file_path": "results\\25000_0.0003_2test\\TouchMoveCube.onnx",
+            "reward": 2.922871809739333,
+            "creation_time": 1715772256.8091593,
+            "auxillary_file_paths": [
+                "results\\25000_0.0003_2test\\TouchMoveCube\\TouchMoveCube-608764.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}
