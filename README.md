@@ -7,6 +7,7 @@ This project document aims to help developers understand the functional logic of
 
 Folder Structure Overview
 
+```
 /Assets
   ├── Scripts
   │     ├── Control
@@ -26,7 +27,7 @@ Folder Structure Overview
   │           ├── MoveCubeAgent.cs
   │           ├── FinalAgent.cs
   │           └── TouchGrabAgent.cs
-
+```
 Core Control Modules
 
 1. RobotController.cs
