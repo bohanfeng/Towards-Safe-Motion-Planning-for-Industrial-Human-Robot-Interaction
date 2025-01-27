@@ -8,6 +8,12 @@ Code Repository for the Paper: "Towards Safe Motion Planning for Industrial 🤖
 
 This repository provides the 📦 supporting the implementation and experimentation of safe motion planning for industrial 🤖🤝. It includes core 🧩 for motion control, sensing, simulation, and reinforcement 🧠 tasks. The following sections describe the project structure and offer detailed insights into the functionality of each 🧩.
 
+> **Note**: This project is developed using Unity version 2021.3.4. Please ensure your version matches for compatibility. The project includes interfaces for human digital twins and virtual reality, though these parts are not fully uploaded yet. Once the paper is accepted, we will upload the complete code.
+
+> **Reinforcement Learning**: The system currently allows reinforcement learning algorithms to output without any issues.
+
+> **Hardware Testing**: The motion planning results, hardware connections, and reinforcement learning model training are all running without any issues.
+
 ---
 
 ## 📂 Folder Structure
