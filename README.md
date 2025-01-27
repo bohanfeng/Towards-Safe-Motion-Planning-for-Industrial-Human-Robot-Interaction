@@ -1,6 +1,177 @@
 # Towards-Safe-Motion-Planning-for-Industrial-Human-Robot-Interaction
 Code Repository for the Paper: "Towards Safe Motion Planning for Industrial Human-Robot Interaction"
 
+Project Structure and Functional Description
+
+This project document aims to help developers understand the functional logic of each .cs file and the hardware adaptation requirements, providing comprehensive support for project development. It covers core control modules, sensing and detection modules, simulation randomization modules, and reinforcement learning task modules.
+
+Folder Structure Overview
+
+/Assets
+  ├── Scripts
+  │     ├── Control
+  │     │     ├── ArticulationJointController.cs
+  │     │     ├── RobotController.cs
+  │     │     ├── PincherController.cs
+  │     │     └── PincherFingerController.cs
+  │     ├── Detection
+  │     │     ├── TouchCubeDetector.cs
+  │     │     ├── ObstacleTouchDetector.cs
+  │     │     ├── TableTouchDetector.cs
+  │     │     └── TouchBottomDetector.cs
+  │     ├── Simulation
+  │     │     ├── TablePositionRandomizer.cs
+  │     │     └── MovementControl.cs
+  │     ├── Agents
+  │           ├── MoveCubeAgent.cs
+  │           ├── FinalAgent.cs
+  │           └── TouchGrabAgent.cs
+
+Core Control Modules
+
+1. RobotController.cs
+
+Function:
+
+Controls the rotation of robotic arm joints.
+
+Retrieves current joint angles and states.
+
+Forcibly sets target positions of the robotic arm for reinforcement learning and hardware operations.
+
+Hardware Dependency:
+
+Uses ArticulationJointController for precise joint control; requires adaptation to specific hardware models.
+
+Recommendation: Ensure the hardware kinematic model aligns with the script to avoid parameter-induced errors.
+
+Path: Scripts/Control/RobotController.cs
+
+2. PincherController.cs
+
+Function:
+
+Controls the opening and closing of the robotic gripper.
+
+Provides real-time feedback on the gripper's center point for object positioning and accurate grasping.
+
+Hardware Dependency:
+
+Interacts directly with hardware gripper using ArticulationBody; requires tuning of gripping speed and force to adapt to specific objects.
+
+Path: Scripts/Control/PincherController.cs
+
+3. ArticulationJointController.cs
+
+Function:
+
+Implements low-level joint control logic, supporting dynamic adjustments of rotation direction and speed.
+
+Hardware Dependency:
+
+Parameters in the script need configuration based on the actual joint's maximum rotation angles and speeds.
+
+Path: Scripts/Control/ArticulationJointController.cs
+
+Sensing and Detection Modules
+
+1. TouchCubeDetector.cs
+
+Function:
+
+Detects whether the robotic gripper touches the target object, used in reinforcement learning reward mechanisms.
+
+Hardware Dependency:
+
+Relies on sensor or collision feedback signals; hardware response precision must match simulation.
+
+Path: Scripts/Detection/TouchCubeDetector.cs
+
+2. ObstacleTouchDetector.cs
+
+Function:
+
+Detects if the robotic arm collides with obstacles, used in collision penalty logic during training.
+
+Hardware Dependency:
+
+Can integrate hardware touch sensors to improve detection accuracy.
+
+Path: Scripts/Detection/ObstacleTouchDetector.cs
+
+Simulation and Randomization Modules
+
+1. TablePositionRandomizer.cs
+
+Function:
+
+Randomly generates the position and rotation of target objects, enhancing environmental diversity in reinforcement learning.
+
+Simulation Dependency:
+
+Designed for simulation environments; feasibility in real deployments must be assessed.
+
+Path: Scripts/Simulation/TablePositionRandomizer.cs
+
+2. MovementControl.cs
+
+Function:
+
+Simulates the movement of target objects in the environment for dynamic task training.
+
+Simulation Dependency:
+
+Not directly hardware-dependent; suitable for simulation-only scenarios.
+
+Path: Scripts/Simulation/MovementControl.cs
+
+Reinforcement Learning Task Modules
+
+1. MoveCubeAgent.cs
+
+Function:
+
+Implements reinforcement learning agents for grasping and moving tasks.
+
+Involves multi-joint control and target positioning of the robotic arm.
+
+Path: Scripts/Agents/MoveCubeAgent.cs
+
+2. FinalAgent.cs
+
+Function:
+
+Handles complex tasks like grasping and placing, integrating motion control and reward strategies.
+
+Path: Scripts/Agents/FinalAgent.cs
+
+3. TouchGrabAgent.cs
+
+Function:
+
+Focuses on touch detection and grasping tasks, integrating various detection modules (e.g., TouchCubeDetector, PincherController).
+
+Strongly integrates reinforcement learning logic with hardware control.
+
+Path: Scripts/Agents/TouchGrabAgent.cs
+
+Development Notes
+
+Hardware Adaptation Suggestions:
+
+Ensure the robotic arm and gripper modules are adjusted according to the kinematic model of the actual device.
+
+All sensor-dependent modules (e.g., TouchCubeDetector) should be fine-tuned for sensor precision.
+
+Compensation for Simulation and Reality Differences:
+
+Simulation modules (e.g., TablePositionRandomizer and MovementControl) must be validated in real deployment to ensure consistent behavior.
+
+Code Extensibility:
+
+The code structure follows modular design, allowing easy extension of new functional modules or replacement of existing hardware.
+
+
 # Unity ML-Agents Training Guide
 
 ## Overview
